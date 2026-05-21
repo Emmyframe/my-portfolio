@@ -1,0 +1,127 @@
+/* Theme tokens only — no backdrop-filter or blur on UI; theme swap is instant (no transitional blur). */
+html[data-theme='wine'] {
+  color-scheme: dark;
+  --bg: #2a0f18;
+  --bg-elevated: #3a1622;
+  --bg-muted: #1f0a10;
+  --surface: #45202c;
+  --text: #f5ebe7;
+  --text-muted: #d4c4bd;
+  --accent: #c9a86c;
+  --accent-strong: #e8d4a8;
+  --wine-deep: #1a080c;
+  --border: rgba(245, 235, 231, 0.12);
+  --shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+  --device-frame: #0d0608;
+  --device-bezel: #1c0c12;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+  --bg: #faf7f4;
+  --bg-elevated: #ffffff;
+  --bg-muted: #f0e8e2;
+  --surface: #fffefb;
+  --text: #2a0f18;
+  --text-muted: #5c3d45;
+  --accent: #722f37;
+  --accent-strong: #5c1f2e;
+  --wine-deep: #722f37;
+  --border: rgba(114, 47, 55, 0.15);
+  --shadow: 0 20px 40px rgba(44, 18, 24, 0.08);
+  --device-frame: #1a1a1a;
+  --device-bezel: #2d2d2d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Full-bleed sections use 100vw; hide stray horizontal scrollbar on narrow viewports */
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  /* Subtle grain via CSS only — not a blur filter */
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(201, 168, 108, 0.12), transparent 55%),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(114, 47, 55, 0.06), transparent 45%);
+}
+
+html[data-theme='light'] body {
+  background-image:
+    radial-gradient(ellipse 100% 60% at 10% 0%, rgba(114, 47, 55, 0.06), transparent 50%),
+    radial-gradient(ellipse 80% 40% at 90% 100%, rgba(201, 168, 108, 0.1), transparent 45%);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Cards: solid backgrounds only — no filter/backdrop transitions */
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.section {
+  padding: clamp(3rem, 6vw, 5.5rem) clamp(1.25rem, 4vw, 3rem);
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section__title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+
+.section__lead {
+  margin: 0 0 2rem;
+  max-width: 52ch;
+  color: var(--text-muted);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

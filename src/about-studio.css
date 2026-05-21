@@ -1,0 +1,66 @@
+/* About page — full-bleed strip (loads after portfolio.css; no backdrop-filter).
+   Solid studio background — no device mockup image. */
+
+.about-studio {
+  max-width: none;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  background-color: #0a1628;
+  /* No url(/about-backdrop.png) — device silhouettes removed */
+  background-image:
+    radial-gradient(ellipse 85% 55% at 50% 0%, rgba(201, 168, 108, 0.14), transparent 55%),
+    linear-gradient(180deg, #0f1a2e 0%, #0a1220 45%, #060d18 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 32px 64px rgba(0, 0, 0, 0.45);
+}
+
+.about-studio__actions {
+  margin-top: 1.75rem;
+}
+
+.about-studio__meta {
+  margin: -0.5rem 0 1.75rem;
+  max-width: 52ch;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #e2e8f0;
+}
+
+.about-studio__meta span {
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+html[data-theme='light'] .about-studio {
+  background-color: #1e293b;
+  background-image:
+    radial-gradient(ellipse 85% 55% at 50% 0%, rgba(201, 168, 108, 0.12), transparent 55%),
+    linear-gradient(180deg, #334155 0%, #1e293b 50%, #0f172a 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 28px 56px rgba(15, 23, 42, 0.25);
+}
+
+html[data-theme='light'] .about-studio__meta {
+  color: #f1f5f9;
+}
+
+html[data-theme='light'] .about-studio__meta span {
+  color: #cbd5e1;
+}
+
+html[data-theme='light'] .about-studio .btn--ghost {
+  color: #f1f5f9;
+  border-color: rgba(248, 250, 252, 0.35);
+}
+
+html[data-theme='light'] .about-studio .btn--ghost:hover {
+  color: #fff;
+  border-color: rgba(248, 250, 252, 0.65);
+}
