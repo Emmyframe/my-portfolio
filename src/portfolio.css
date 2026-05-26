@@ -45,6 +45,12 @@
   font-weight: 600;
 }
 
+.site-header__sign-out {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
 .logo-link {
   display: flex;
   align-items: center;

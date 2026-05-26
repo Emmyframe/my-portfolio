@@ -5,15 +5,12 @@ import { fileURLToPath } from 'node:url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const dist = join(root, 'dist')
 const indexPath = join(dist, 'index.html')
+const projectsFile = join(root, 'src', 'data', 'projects.json')
 
-const PREVIEWS = [
-  'commerce.png',
-  'dashboard.png',
-  'wellness.png',
-  'onboarding.png',
-  'field.png',
-  'creator.png',
-]
+function loadPreviewNames() {
+  const data = JSON.parse(readFileSync(projectsFile, 'utf8'))
+  return (data.projects ?? []).map((p) => `${p.id}.png`)
+}
 
 if (!existsSync(indexPath)) {
   console.error('FAIL: dist/index.html missing — run npm run build')
@@ -34,6 +31,13 @@ if (!existsSync(assetsDir) || !readdirSync(assetsDir).some((f) => f.endsWith('.j
   process.exit(1)
 }
 
+const PREVIEWS = loadPreviewNames()
+
+if (PREVIEWS.length === 0) {
+  console.log('OK: production build verified (app bundle, no project previews configured)')
+  process.exit(0)
+}
+
 let previewOk = true
 for (const name of PREVIEWS) {
   const file = join(dist, 'project-previews', name)
@@ -48,4 +52,6 @@ if (!previewOk) {
   process.exit(1)
 }
 
-console.log('OK: production build verified (app bundle + 6 project previews)')
+console.log(
+  `OK: production build verified (app bundle + ${PREVIEWS.length} project preview${PREVIEWS.length === 1 ? '' : 's'})`,
+)

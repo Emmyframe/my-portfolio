@@ -5,6 +5,8 @@
 [build.environment]
   NODE_VERSION = "20"
   NPM_FLAGS = "--no-audit"
+  VITE_SUPABASE_URL = "https://vxigmiqtxrtxuajrkahm.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ4aWdtaXF0eHJ0eHVhanJrYWhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk0MzkzODUsImV4cCI6MjA5NTAxNTM4NX0.Bakt_JKCX7N_ADEKT1gKPxaJaGesxZxNKFOi4x13u9Y"
 
 # React Router: direct URLs like /about must serve the SPA shell
 [[redirects]]

@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "id": "emmy-bgr",
+      "title": "emmyBGR",
+      "desc": "AI background remover — upload a photo and get a clean cutout in seconds. Built for products, portraits, and everyday images.",
+      "tags": ["React", "Vite", "Vercel", "AI"],
+      "href": "https://emmy-s-background-studio.vercel.app/"
+    },
+    {
+      "id": "bid-bloom",
+      "title": "BidHive",
+      "desc": "Reverse marketplace for buyers — post a request, receive bids from vetted sellers, and pay safely with escrow.",
+      "tags": ["React", "Vite", "Vercel", "Marketplace"],
+      "href": "https://bid-bloom.vercel.app/"
+    },
+    {
+      "id": "emmystream",
+      "title": "EmmyFlix",
+      "desc": "Watch movies online — browse trending and top-rated films in a streaming-style experience.",
+      "tags": ["React", "Vite", "Vercel", "Streaming"],
+      "href": "https://emmystream.vercel.app/"
+    }
+  ]
+}

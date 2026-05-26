@@ -1,0 +1,116 @@
+.auth-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  width: min(100%, 420px);
+  padding: 2rem;
+}
+
+.auth-card__logo {
+  margin-bottom: 1.5rem;
+}
+
+.auth-card__title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.75rem;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.auth-card__lead {
+  margin: 0 0 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 0.35rem;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-muted);
+  margin-bottom: 1.25rem;
+}
+
+.auth-tabs__btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.auth-tabs__btn--active {
+  background: var(--bg-elevated);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.auth-form label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--text-muted);
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  margin-bottom: 1rem;
+}
+
+.auth-form input:focus {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 1px;
+}
+
+.auth-form__submit {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.auth-card__error {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  background: rgba(180, 40, 50, 0.15);
+  color: #f5a8ad;
+  font-size: 0.9rem;
+}
+
+html[data-theme='light'] .auth-card__error {
+  color: #8b1e2a;
+  background: rgba(114, 47, 55, 0.1);
+}
+
+.auth-card__message {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  background: rgba(201, 168, 108, 0.12);
+  color: var(--accent-strong);
+  font-size: 0.9rem;
+}
+
+.auth-loading {
+  min-height: 50svh;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+}

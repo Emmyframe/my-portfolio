@@ -1,4 +1,5 @@
 import { NavLink, Link } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
 import { ThemeToggle } from './ThemeToggle'
 import type { Theme } from '../theme'
 
@@ -15,6 +16,8 @@ type Props = {
 }
 
 export function Header({ theme, onThemeChange }: Props) {
+  const { signOut } = useAuth()
+
   return (
     <header className="site-header">
       <Link className="logo-link" to="/">
@@ -39,6 +42,13 @@ export function Header({ theme, onThemeChange }: Props) {
           ))}
         </ul>
         <ThemeToggle theme={theme} onChange={onThemeChange} />
+        <button
+          type="button"
+          className="btn btn--ghost site-header__sign-out"
+          onClick={() => signOut()}
+        >
+          Sign out
+        </button>
       </nav>
     </header>
   )

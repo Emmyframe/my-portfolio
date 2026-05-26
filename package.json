@@ -12,9 +12,11 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "verify:about-studio": "node scripts/verify-about-studio.mjs",
-    "deploy:netlify": "npm run build && npx netlify-cli deploy --prod --dir=dist"
+    "deploy:netlify": "npm run build && npx netlify-cli deploy --prod --dir=dist",
+    "sync:netlify-env": "node scripts/sync-netlify-env.mjs"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.106.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.15.1"
