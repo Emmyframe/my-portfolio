@@ -8,7 +8,6 @@ import './hero-backdrop.css'
 /* About studio backgrounds — must stay after portfolio.css */
 import './about-studio.css'
 import App from './App.tsx'
-import { AuthProvider } from './contexts/AuthContext.tsx'
 
 const rootEl = document.getElementById('root')
 if (!rootEl) {
@@ -18,9 +17,7 @@ if (!rootEl) {
 createRoot(rootEl).render(
   <StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
+      <App />
     </BrowserRouter>
   </StrictMode>,
 )

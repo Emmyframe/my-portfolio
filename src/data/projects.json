@@ -20,6 +20,13 @@
       "desc": "Watch movies online — browse trending and top-rated films in a streaming-style experience.",
       "tags": ["React", "Vite", "Vercel", "Streaming"],
       "href": "https://emmystream.vercel.app/"
+    },
+    {
+      "id": "valor-clothing",
+      "title": "Valor",
+      "desc": "Minimalist luxury clothing store — browse curated collections for adults and kids, manage your cart, and shop modern essentials with a clean storefront experience.",
+      "tags": ["Next.js", "E-commerce", "Fashion", "Vercel"],
+      "href": "https://valor-clothing-store.vercel.app/"
     }
   ]
 }
