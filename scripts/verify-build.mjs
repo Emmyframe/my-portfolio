@@ -8,6 +8,10 @@ const indexPath = join(dist, 'index.html')
 const projectsFile = join(root, 'src', 'data', 'projects.json')
 
 function loadPreviewNames() {
+  if (!existsSync(projectsFile)) {
+    return []
+  }
+
   const data = JSON.parse(readFileSync(projectsFile, 'utf8'))
   return (data.projects ?? []).map((p) => `${p.id}.png`)
 }
