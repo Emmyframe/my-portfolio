@@ -8,8 +8,8 @@ export function AboutSection() {
         <div className="space-y-6">
           <SectionHeading
             id="about"
-            title="About this concept"
-            description="A flexible structure inspired by strong portfolio systems and modern product landing pages."
+            title="About Me"
+            description="I'm Emmanuel Ajani (Emmydev), a full-stack developer passionate about turning complex business challenges into elegant, high-performance web applications."
           />
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -19,10 +19,10 @@ export function AboutSection() {
             className="space-y-5 rounded-[1.5rem] border border-border/30 bg-bg-elevated/90 p-8 shadow-soft"
           >
             <p className="text-base leading-8 text-text-muted">
-              This portfolio layout preserves the same section sequencing and navigation behavior as the reference while using placeholder content and a fresh visual language.
+              I build modern, responsive, and scalable web applications. I focus on creating intuitive user experiences supported by reliable backend systems.
             </p>
-            <p className="text-base leading-8 text-text-muted">
-              It is organized for easy customization, with reusable section components and a clear responsive grid system.
+            <p className="text-sm text-text-muted">
+              My work blends polished frontend interfaces with solid backend architecture, making every project feel fast, stable, and ready for growth.
             </p>
           </motion.div>
         </div>
@@ -34,12 +34,22 @@ export function AboutSection() {
           transition={{ duration: 0.55, ease: 'easeOut' }}
           className="grid gap-5 sm:grid-cols-2"
         >
-          {['Clean structure', 'Visual rhythm', 'Mobile-first', 'Motion-ready'].map((item) => (
-            <div key={item} className="rounded-[1.5rem] bg-bg/70 p-6">
-              <p className="text-sm uppercase tracking-[0.28em] text-accent">{item}</p>
-              <p className="mt-3 text-sm text-text-muted">A placeholder detail describing the design system and spacing approach.</p>
-            </div>
-          ))}
+          <div className="rounded-[1.5rem] bg-bg/70 p-6">
+            <p className="text-sm uppercase tracking-[0.28em] text-accent">Modern Development</p>
+            <p className="mt-3 text-sm text-text-muted">I build responsive applications using React, TypeScript, Tailwind CSS, Node.js, and modern development practices.</p>
+          </div>
+          <div className="rounded-[1.5rem] bg-bg/70 p-6">
+            <p className="text-sm uppercase tracking-[0.28em] text-accent">Problem Solving</p>
+            <p className="mt-3 text-sm text-text-muted">I enjoy breaking down complex problems into simple, efficient, and maintainable solutions.</p>
+          </div>
+          <div className="rounded-[1.5rem] bg-bg/70 p-6">
+            <p className="text-sm uppercase tracking-[0.28em] text-accent">Continuous Learning</p>
+            <p className="mt-3 text-sm text-text-muted">I regularly explore new technologies, improve my skills, and apply best practices in every project.</p>
+          </div>
+          <div className="rounded-[1.5rem] bg-bg/70 p-6">
+            <p className="text-sm uppercase tracking-[0.28em] text-accent">Collaboration</p>
+            <p className="mt-3 text-sm text-text-muted">I value clear communication, teamwork, and writing code that is easy to understand and maintain.</p>
+          </div>
         </motion.div>
       </div>
     </section>

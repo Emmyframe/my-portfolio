@@ -4,9 +4,8 @@ import { motion } from 'framer-motion'
 const links = [
   { label: 'Home', href: '#hero' },
   { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
+  { label: 'Services', href: '#services' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: '#contact' }
 ]
 
@@ -17,7 +16,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-border/30 bg-bg/95 backdrop-blur-lg">
       <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-4 sm:px-6">
         <a href="#hero" className="font-semibold tracking-[0.22em] text-accent uppercase">
-          Portfolio
+          Emmydev
         </a>
 
         <nav className="hidden items-center gap-6 md:flex">
