@@ -25,7 +25,9 @@ export function HeroSection() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="#contact" className="primary-button inline-flex items-center">Hire Me</a>
-              <a href="#about" className="secondary-button inline-flex items-center">Learn More</a>
+            <a href="#about" className="secondary-button inline-flex items-center">Learn More</a>
+          </div>
+
           <div className="mt-10 grid gap-3 sm:grid-cols-3">
             <div className="rounded-[1.5rem] bg-bg-elevated/90 p-4 text-sm text-text-muted">
               <p className="text-xl font-semibold text-white">5+</p>
