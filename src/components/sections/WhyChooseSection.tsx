@@ -1,4 +1,5 @@
 import { SectionHeading } from '../ui/SectionHeading'
+import { Link } from 'react-router-dom'
 
 const reasons = [
   {
@@ -15,7 +16,7 @@ const reasons = [
   },
   {
     title: 'Scalable Architecture',
-    detail: 'Applications built for future growth and maintainability.'
+    detail: 'Future-proof solutions built to grow with your needs, utilizing modern development practices.'
   }
 ]
 
@@ -27,15 +28,15 @@ export function WhyChooseSection() {
           <SectionHeading
             id="why-choose"
             title="Why Clients Choose Me"
-            description="A strategic approach to building modern applications that perform, scale, and deliver business value." 
+            description="Quality in every detail — delivering excellence through innovative solutions and meticulous attention to detail."
           />
           <div className="rounded-[1.75rem] border border-border/20 bg-bg-elevated/90 p-8 shadow-soft">
             <p className="text-sm text-text-muted">
-              Let’s build a modern, scalable, and high-performing solution tailored to your business goals.
+              Let's build a modern, scalable, and high-performing solution tailored to your business goals.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <a href="#contact" className="primary-button inline-flex justify-center">Start Your Project</a>
-              <a href="#contact" className="secondary-button inline-flex justify-center">Contact Me</a>
+              <Link to="/#contact" className="primary-button inline-flex justify-center">Start Your Project</Link>
+              <Link to="/#contact" className="secondary-button inline-flex justify-center">Contact Me</Link>
             </div>
           </div>
         </div>

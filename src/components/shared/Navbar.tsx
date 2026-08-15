@@ -1,29 +1,47 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Link, useLocation } from 'react-router-dom'
 
-const links = [
-  { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' }
+const sectionLinks = [
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/#about' },
+  { label: 'Services', to: '/#services' },
+  { label: 'Projects', to: '/#projects' },
+  { label: 'Contact', to: '/#contact' }
+]
+
+const pageLinks = [
+  { label: 'Experience', to: '/experience' },
+  { label: 'Resume', to: '/resume' }
 ]
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
+  const location = useLocation()
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/30 bg-bg/95 backdrop-blur-lg">
       <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-4 sm:px-6">
-        <a href="#hero" className="font-semibold tracking-[0.22em] text-accent uppercase">
+        <Link to="/" className="font-semibold tracking-[0.22em] text-accent uppercase">
           Emmydev
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
-          {links.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm text-text-muted transition hover:text-white">
+          {sectionLinks.map((link) => (
+            <Link key={link.label} to={link.to} className="text-sm text-text-muted transition hover:text-white">
               {link.label}
-            </a>
+            </Link>
+          ))}
+          {pageLinks.map((link) => (
+            <Link
+              key={link.label}
+              to={link.to}
+              className={`text-sm transition hover:text-white ${
+                location.pathname === link.to ? 'text-accent' : 'text-text-muted'
+              }`}
+            >
+              {link.label}
+            </Link>
           ))}
         </nav>
 
@@ -45,15 +63,15 @@ export function Navbar() {
           className="border-t border-border/20 bg-bg/95 md:hidden"
         >
           <div className="space-y-2 px-4 py-4">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+            {[...sectionLinks, ...pageLinks].map((link) => (
+              <Link
+                key={link.label}
+                to={link.to}
                 className="block rounded-3xl px-4 py-3 text-sm text-text-muted transition hover:bg-bg-elevated hover:text-white"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </motion.div>

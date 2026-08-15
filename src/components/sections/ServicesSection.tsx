@@ -10,26 +10,26 @@ const services = [
   {
     title: 'Frontend Development',
     description:
-      'Create responsive, accessible, and visually engaging interfaces with excellent user experience and performance.',
+      'Crafting unique, responsive websites that perfectly blend aesthetics with functionality for excellent user experience.',
     items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS']
   },
   {
     title: 'Backend Development & APIs',
     description:
-      'Develop secure REST APIs, authentication systems, business logic, and scalable server-side applications.',
+      'Architecting RESTful APIs, authentication systems, business logic, and scalable server-side applications.',
     items: ['Node.js', 'Express', 'JWT', 'REST API']
   },
   {
-    title: 'Performance Optimization',
+    title: 'AI Engineering',
     description:
-      'Improve speed, loading performance, SEO readiness, accessibility, and Core Web Vitals for real-world use.',
-    items: ['Lazy Loading', 'Image Optimization', 'Caching', 'Performance Audits']
+      'Building AI-powered solutions and integrating machine learning models to automate and enhance business workflows.',
+    items: ['Python', 'LangChain', 'OpenAI', 'TensorFlow']
   },
   {
     title: 'Database Design',
     description:
       'Design optimized database structures that support scalability, reliability, and fast data retrieval.',
-    items: ['MongoDB', 'PostgreSQL', 'Firebase']
+    items: ['MongoDB', 'PostgreSQL', 'MySQL', 'Firebase']
   },
   {
     title: 'Deployment & Maintenance',
@@ -46,7 +46,7 @@ export function ServicesSection() {
         <SectionHeading
           id="services"
           title="My Services"
-          description="I help startups, businesses, and entrepreneurs transform ideas into fast, scalable, and production-ready web applications."
+          description="Delivering excellence through innovative solutions and meticulous attention to detail."
         />
 
         <div className="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">

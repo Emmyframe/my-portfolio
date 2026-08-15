@@ -9,7 +9,7 @@ export function AboutSection() {
           <SectionHeading
             id="about"
             title="About Me"
-            description="I'm Emmanuel Ajani (Emmydev), a full-stack developer passionate about turning complex business challenges into elegant, high-performance web applications."
+            description="I'm Ajani Emmanuel (Emmydev), a results-driven software developer specializing in backend engineering, fullstack development, and AI-powered solutions."
           />
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -19,10 +19,10 @@ export function AboutSection() {
             className="space-y-5 rounded-[1.5rem] border border-border/30 bg-bg-elevated/90 p-8 shadow-soft"
           >
             <p className="text-base leading-8 text-text-muted">
-              I build modern, responsive, and scalable web applications. I focus on creating intuitive user experiences supported by reliable backend systems.
+              With over 5 years of experience, I excel in designing and implementing scalable web applications, architecting RESTful APIs, developing secure smart contracts, and creating decentralized platforms.
             </p>
             <p className="text-sm text-text-muted">
-              My work blends polished frontend interfaces with solid backend architecture, making every project feel fast, stable, and ready for growth.
+              My technical expertise spans Python, JavaScript, Node.js, Solidity, Ethereum, Phoenix, and database management systems like MongoDB and MySQL. I have a strong focus on performance optimization, code maintainability, and delivering end-to-end solutions for seamless user experiences.
             </p>
           </motion.div>
         </div>
@@ -35,20 +35,20 @@ export function AboutSection() {
           className="grid gap-5 sm:grid-cols-2"
         >
           <div className="rounded-[1.5rem] bg-bg/70 p-6">
-            <p className="text-sm uppercase tracking-[0.28em] text-accent">Modern Development</p>
-            <p className="mt-3 text-sm text-text-muted">I build responsive applications using React, TypeScript, Tailwind CSS, Node.js, and modern development practices.</p>
+            <p className="text-sm uppercase tracking-[0.28em] text-accent">Creative Design</p>
+            <p className="mt-3 text-sm text-text-muted">Crafting unique, responsive websites that perfectly blend aesthetics with functionality.</p>
           </div>
           <div className="rounded-[1.5rem] bg-bg/70 p-6">
-            <p className="text-sm uppercase tracking-[0.28em] text-accent">Problem Solving</p>
-            <p className="mt-3 text-sm text-text-muted">I enjoy breaking down complex problems into simple, efficient, and maintainable solutions.</p>
+            <p className="text-sm uppercase tracking-[0.28em] text-accent">Rapid Development</p>
+            <p className="mt-3 text-sm text-text-muted">Swift and efficient development process without compromising on quality or attention to detail.</p>
           </div>
           <div className="rounded-[1.5rem] bg-bg/70 p-6">
-            <p className="text-sm uppercase tracking-[0.28em] text-accent">Continuous Learning</p>
-            <p className="mt-3 text-sm text-text-muted">I regularly explore new technologies, improve my skills, and apply best practices in every project.</p>
+            <p className="text-sm uppercase tracking-[0.28em] text-accent">High Performance</p>
+            <p className="mt-3 text-sm text-text-muted">Optimized code and efficient hosting ensuring lightning-fast page loads and smooth user experience.</p>
           </div>
           <div className="rounded-[1.5rem] bg-bg/70 p-6">
-            <p className="text-sm uppercase tracking-[0.28em] text-accent">Collaboration</p>
-            <p className="mt-3 text-sm text-text-muted">I value clear communication, teamwork, and writing code that is easy to understand and maintain.</p>
+            <p className="text-sm uppercase tracking-[0.28em] text-accent">Scalable Architecture</p>
+            <p className="mt-3 text-sm text-text-muted">Future-proof solutions built to grow with your needs, utilizing modern development practices.</p>
           </div>
         </motion.div>
       </div>

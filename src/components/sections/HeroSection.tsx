@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export function HeroSection() {
   return (
@@ -11,21 +12,21 @@ export function HeroSection() {
           className="space-y-6"
         >
           <div className="space-y-3">
-            <p className="text-sm uppercase tracking-[0.28em] text-accent">Emmydev</p>
+            <p className="text-sm uppercase tracking-[0.28em] text-accent">Ajani Emmanuel</p>
             <p className="text-xs uppercase tracking-[0.3em] text-text-muted">Available for freelance</p>
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight text-white">
-            Digital Systems That Drive Real Business Growth
+            Full-Stack Developer, AI Engineer & Digital Business Builder
           </h1>
 
           <p className="max-w-2xl text-lg text-text-muted sm:text-xl">
-            I help startups, entrepreneurs, and growing businesses turn ideas into scalable, high-converting web solutions that perform, convert, and scale.
+            Let's build your ideas, online presence quickly and efficiently. I help startups, entrepreneurs, and growing businesses turn ideas into scalable, high-converting web solutions.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#contact" className="primary-button inline-flex items-center">Hire Me</a>
-            <a href="#about" className="secondary-button inline-flex items-center">Learn More</a>
+            <Link to="/#contact" className="primary-button inline-flex items-center">Hire Me</Link>
+            <Link to="/#about" className="secondary-button inline-flex items-center">Learn More</Link>
           </div>
 
           <div className="mt-10 grid gap-3 sm:grid-cols-3">
@@ -46,7 +47,7 @@ export function HeroSection() {
           <div className="mt-8">
             <p className="text-sm uppercase tracking-[0.28em] text-accent">Built with</p>
             <div className="mt-4 flex flex-wrap gap-2">
-              {['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS', 'MongoDB', 'PostgreSQL'].map((tech) => (
+              {['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'Tailwind CSS', 'MongoDB', 'PostgreSQL'].map((tech) => (
                 <span key={tech} className="inline-flex items-center rounded-full bg-white/5 px-3 py-2 text-sm text-text-muted">
                   {tech}
                 </span>
@@ -73,7 +74,7 @@ export function HeroSection() {
                   <h2 className="text-2xl font-semibold">Business-focused digital products</h2>
                 </div>
                 <p className="text-sm leading-7 text-text-muted">
-                  Built for startups, entrepreneurs, and growing businesses that need scalable, high-converting web solutions.
+                  Results-driven software developer specializing in backend engineering, fullstack development, and AI-powered solutions.
                 </p>
                 <div className="grid gap-3 sm:grid-cols-3">
                   <div className="rounded-[1.5rem] bg-white/5 p-4 text-center">
@@ -91,7 +92,7 @@ export function HeroSection() {
                 </div>
               </div>
               <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5">
-                <img src="/emmy-portrait.png" alt="Emmydev portrait" className="h-full w-full object-cover" />
+                <img src="/emmy-portrait.png" alt="Ajani Emmanuel portrait" className="h-full w-full object-cover" />
               </div>
             </div>
           </div>
