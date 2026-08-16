@@ -1,5 +1,7 @@
 import { SectionHeading } from '../ui/SectionHeading'
 import { Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 
 const reasons = [
   {
@@ -30,23 +32,31 @@ export function WhyChooseSection() {
             title="Why Clients Choose Me"
             description="Quality in every detail — delivering excellence through innovative solutions and meticulous attention to detail."
           />
-          <div className="rounded-[1.75rem] border border-border/20 bg-bg-elevated/90 p-8 shadow-soft">
-            <p className="text-sm text-text-muted">
-              Let's build a modern, scalable, and high-performing solution tailored to your business goals.
-            </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Link to="/#contact" className="primary-button inline-flex justify-center">Start Your Project</Link>
-              <Link to="/#contact" className="secondary-button inline-flex justify-center">Contact Me</Link>
-            </div>
-          </div>
+          <Card>
+            <CardContent className="p-8">
+              <p className="text-sm text-text-muted">
+                Let's build a modern, scalable, and high-performing solution tailored to your business goals.
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <Button asChild>
+                  <Link to="/#contact">Start Your Project</Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/#contact">Contact Me</Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
           {reasons.map((reason) => (
-            <article key={reason.title} className="rounded-[1.75rem] border border-border/20 bg-bg-elevated/90 p-6 shadow-soft">
-              <h3 className="text-lg font-semibold text-white">{reason.title}</h3>
-              <p className="mt-3 text-sm text-text-muted">{reason.detail}</p>
-            </article>
+            <Card key={reason.title}>
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold text-white">{reason.title}</h3>
+                <p className="mt-3 text-sm text-text-muted">{reason.detail}</p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

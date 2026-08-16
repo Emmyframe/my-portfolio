@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion'
 import { PageHero } from '../components/ui/PageHero'
 import { Link } from 'react-router-dom'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
 
 const experiences = [
   {
@@ -91,45 +95,43 @@ export function ExperiencePage() {
                   aria-hidden="true"
                 />
 
-                <article className="rounded-[1.5rem] border border-border/20 bg-bg-elevated/90 p-6 shadow-soft">
-                  <p className="text-xs uppercase tracking-[0.24em] text-accent">{exp.period}</p>
-                  <h3 className="mt-3 text-lg font-semibold text-white">{exp.role}</h3>
-                  <p className="mt-1 text-sm text-text-muted">{exp.company}</p>
-                  <p className="mt-4 text-sm leading-7 text-text-muted">{exp.description}</p>
+                <Card>
+                  <CardContent className="p-6">
+                    <Badge variant="accent">{exp.period}</Badge>
+                    <h3 className="mt-3 text-lg font-semibold text-white">{exp.role}</h3>
+                    <p className="mt-1 text-sm text-text-muted">{exp.company}</p>
+                    <Separator className="my-4" />
+                    <p className="text-sm leading-7 text-text-muted">{exp.description}</p>
 
-                  <ul className="mt-4 space-y-2">
-                    {exp.achievements.map((item) => (
-                      <li
-                        key={item}
-                        className={`flex gap-2 text-sm text-text-muted ${
-                          index % 2 === 0 ? 'sm:justify-end' : ''
-                        }`}
-                      >
-                        <span className="text-accent" aria-hidden="true">▹</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <ul className="mt-4 space-y-2">
+                      {exp.achievements.map((item) => (
+                        <li
+                          key={item}
+                          className={`flex gap-2 text-sm text-text-muted ${
+                            index % 2 === 0 ? 'sm:justify-end' : ''
+                          }`}
+                        >
+                          <span className="text-accent" aria-hidden="true">▹</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                  <div className={`mt-5 flex flex-wrap gap-2 ${index % 2 === 0 ? 'sm:justify-end' : ''}`}>
-                    {exp.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.24em] text-text-muted"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </article>
+                    <div className={`mt-5 flex flex-wrap gap-2 ${index % 2 === 0 ? 'sm:justify-end' : ''}`}>
+                      {exp.tech.map((t) => (
+                        <Badge key={t} variant="outline">{t}</Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
 
           <div className="mt-12 text-center">
-            <Link to="/resume" className="primary-button inline-flex items-center">
-              View Full Resume
-            </Link>
+            <Button size="lg" asChild>
+              <Link to="/resume">View Full Resume</Link>
+            </Button>
           </div>
         </div>
       </section>

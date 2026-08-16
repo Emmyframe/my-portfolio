@@ -1,4 +1,6 @@
 import { SectionHeading } from '../ui/SectionHeading'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 
 const services = [
   {
@@ -51,21 +53,23 @@ export function ServicesSection() {
 
         <div className="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
-            <article key={service.title} className="rounded-[1.75rem] border border-border/20 bg-bg-elevated/90 p-6 shadow-soft">
-              <p className="text-sm uppercase tracking-[0.28em] text-accent">Service</p>
-              <h3 className="mt-4 text-xl font-semibold text-white">{service.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-text-muted">{service.description}</p>
-              <div className="mt-5 space-y-2">
-                <p className="text-sm font-semibold text-white">Technologies</p>
-                <div className="flex flex-wrap gap-2">
-                  {service.items.map((item) => (
-                    <span key={item} className="inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.24em] text-text-muted">
-                      {item}
-                    </span>
-                  ))}
+            <Card key={service.title}>
+              <CardHeader>
+                <p className="text-sm uppercase tracking-[0.28em] text-accent">Service</p>
+                <CardTitle className="mt-4">{service.title}</CardTitle>
+                <CardDescription className="mt-3">{service.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <p className="text-sm font-semibold text-white">Technologies</p>
+                  <div className="flex flex-wrap gap-2">
+                    {service.items.map((item) => (
+                      <Badge key={item}>{item}</Badge>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </article>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
