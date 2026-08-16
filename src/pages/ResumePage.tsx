@@ -239,7 +239,7 @@ export function ResumePage() {
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
                 <Button size="lg" asChild>
-                  <Link to="/#contact">Contact Me</Link>
+                  <Link to="/contact">Contact Me</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <Link to="/experience">View Experience</Link>

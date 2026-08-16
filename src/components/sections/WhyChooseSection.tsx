@@ -39,10 +39,10 @@ export function WhyChooseSection() {
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild>
-                  <Link to="/#contact">Start Your Project</Link>
+                  <Link to="/contact">Start Your Project</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/#contact">Contact Me</Link>
+                  <Link to="/contact">Contact Me</Link>
                 </Button>
               </div>
             </CardContent>

@@ -3,17 +3,14 @@ import { motion } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 
-const sectionLinks = [
+const navLinks = [
   { label: 'Home', to: '/' },
-  { label: 'About', to: '/#about' },
-  { label: 'Services', to: '/#services' },
-  { label: 'Projects', to: '/#projects' },
-  { label: 'Contact', to: '/#contact' }
-]
-
-const pageLinks = [
+  { label: 'About', to: '/about' },
+  { label: 'Services', to: '/services' },
+  { label: 'Projects', to: '/projects' },
   { label: 'Experience', to: '/experience' },
-  { label: 'Resume', to: '/resume' }
+  { label: 'Resume', to: '/resume' },
+  { label: 'Contact', to: '/contact' }
 ]
 
 export function Navbar() {
@@ -28,12 +25,7 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
-          {sectionLinks.map((link) => (
-            <Link key={link.label} to={link.to} className="text-sm text-text-muted transition hover:text-white">
-              {link.label}
-            </Link>
-          ))}
-          {pageLinks.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.label}
               to={link.to}
@@ -66,11 +58,13 @@ export function Navbar() {
           className="border-t border-border/20 bg-bg/95 md:hidden"
         >
           <div className="space-y-2 px-4 py-4">
-            {[...sectionLinks, ...pageLinks].map((link) => (
+            {navLinks.map((link) => (
               <Link
                 key={link.label}
                 to={link.to}
-                className="block rounded-3xl px-4 py-3 text-sm text-text-muted transition hover:bg-bg-elevated hover:text-white"
+                className={`block rounded-3xl px-4 py-3 text-sm transition hover:bg-bg-elevated hover:text-white ${
+                  location.pathname === link.to ? 'text-accent' : 'text-text-muted'
+                }`}
                 onClick={() => setOpen(false)}
               >
                 {link.label}

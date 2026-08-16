@@ -28,10 +28,10 @@ export function HeroSection() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild>
-              <Link to="/#contact">Hire Me</Link>
+              <Link to="/contact">Hire Me</Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link to="/#about">Learn More</Link>
+              <Link to="/about">Learn More</Link>
             </Button>
           </div>
 
