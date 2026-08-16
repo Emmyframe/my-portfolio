@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { SectionHeading } from '../ui/SectionHeading'
+import { Card, CardContent } from '@/components/ui/card'
 
 export function AboutSection() {
   return (
@@ -16,14 +17,17 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
-            className="space-y-5 rounded-[1.5rem] border border-border/30 bg-bg-elevated/90 p-8 shadow-soft"
           >
-            <p className="text-base leading-8 text-text-muted">
-              With over 5 years of experience, I excel in designing and implementing scalable web applications, architecting RESTful APIs, developing secure smart contracts, and creating decentralized platforms.
-            </p>
-            <p className="text-sm text-text-muted">
-              My technical expertise spans Python, JavaScript, Node.js, Solidity, Ethereum, Phoenix, and database management systems like MongoDB and MySQL. I have a strong focus on performance optimization, code maintainability, and delivering end-to-end solutions for seamless user experiences.
-            </p>
+            <Card>
+              <CardContent className="space-y-5 p-8">
+                <p className="text-base leading-8 text-text-muted">
+                  With over 5 years of experience, I excel in designing and implementing scalable web applications, architecting RESTful APIs, developing secure smart contracts, and creating decentralized platforms.
+                </p>
+                <p className="text-sm text-text-muted">
+                  My technical expertise spans Python, JavaScript, Node.js, Solidity, Ethereum, Phoenix, and database management systems like MongoDB and MySQL. I have a strong focus on performance optimization, code maintainability, and delivering end-to-end solutions for seamless user experiences.
+                </p>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
 

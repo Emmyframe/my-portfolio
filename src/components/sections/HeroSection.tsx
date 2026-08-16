@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
 
 export function HeroSection() {
   return (
@@ -25,8 +27,12 @@ export function HeroSection() {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link to="/#contact" className="primary-button inline-flex items-center">Hire Me</Link>
-            <Link to="/#about" className="secondary-button inline-flex items-center">Learn More</Link>
+            <Button asChild>
+              <Link to="/#contact">Hire Me</Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link to="/#about">Learn More</Link>
+            </Button>
           </div>
 
           <div className="mt-10 grid gap-3 sm:grid-cols-3">
@@ -48,9 +54,7 @@ export function HeroSection() {
             <p className="text-sm uppercase tracking-[0.28em] text-accent">Built with</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'Tailwind CSS', 'MongoDB', 'PostgreSQL'].map((tech) => (
-                <span key={tech} className="inline-flex items-center rounded-full bg-white/5 px-3 py-2 text-sm text-text-muted">
-                  {tech}
-                </span>
+                <Badge key={tech} variant="outline">{tech}</Badge>
               ))}
             </div>
           </div>
@@ -67,7 +71,7 @@ export function HeroSection() {
               <div className="space-y-5">
                 <div className="flex items-center justify-between gap-4 rounded-3xl bg-white/5 px-4 py-3 text-sm text-text-muted">
                   <span className="font-semibold text-white">Emmydev</span>
-                  <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-slate-950">Freelance</span>
+                  <Badge variant="accent">Freelance</Badge>
                 </div>
                 <div className="space-y-2">
                   <p className="text-sm uppercase tracking-[0.28em] text-accent">Available for Hire</p>

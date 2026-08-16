@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
 
 const sectionLinks = [
   { label: 'Home', to: '/' },
@@ -45,13 +46,15 @@ export function Navbar() {
           ))}
         </nav>
 
-        <button
-          className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-border/50 bg-bg-elevated text-text-muted transition hover:border-accent hover:text-accent md:hidden"
+        <Button
+          variant="outline"
+          size="icon"
+          className="md:hidden"
           onClick={() => setOpen((current) => !current)}
           aria-label="Toggle navigation"
         >
           <span aria-hidden="true">☰</span>
-        </button>
+        </Button>
       </div>
 
       {open ? (
