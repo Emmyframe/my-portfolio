@@ -1,4 +1,3 @@
-import { SectionHeading } from '../ui/SectionHeading'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
@@ -45,12 +44,6 @@ export function ServicesSection() {
   return (
     <section id="services" className="border-t border-border/20 bg-bg py-20 sm:py-24">
       <div className="container mx-auto">
-        <SectionHeading
-          id="services"
-          title="My Services"
-          description="Delivering excellence through innovative solutions and meticulous attention to detail."
-        />
-
         <div className="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
             <Card key={service.title}>

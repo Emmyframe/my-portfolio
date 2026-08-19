@@ -1,35 +1,27 @@
 import { motion } from 'framer-motion'
-import { SectionHeading } from '../ui/SectionHeading'
 import { Card, CardContent } from '@/components/ui/card'
 
 export function AboutSection() {
   return (
     <section id="about" className="border-t border-border/20 bg-bg py-20 sm:py-24">
       <div className="container mx-auto grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="space-y-6">
-          <SectionHeading
-            id="about"
-            title="About Me"
-            description="I'm Ajani Emmanuel (Emmydev), a results-driven software developer specializing in backend engineering, fullstack development, and AI-powered solutions."
-          />
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.55, ease: 'easeOut' }}
-          >
-            <Card>
-              <CardContent className="space-y-5 p-8">
-                <p className="text-base leading-8 text-text-muted">
-                  With over 5 years of experience, I excel in designing and implementing scalable web applications, architecting RESTful APIs, developing secure smart contracts, and creating decentralized platforms.
-                </p>
-                <p className="text-sm text-text-muted">
-                  My technical expertise spans Python, JavaScript, Node.js, Solidity, Ethereum, Phoenix, and database management systems like MongoDB and MySQL. I have a strong focus on performance optimization, code maintainability, and delivering end-to-end solutions for seamless user experiences.
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.55, ease: 'easeOut' }}
+        >
+          <Card>
+            <CardContent className="space-y-5 p-8">
+              <p className="text-base leading-8 text-text-muted">
+                With over 5 years of experience, I excel in designing and implementing scalable web applications, architecting RESTful APIs, developing secure smart contracts, and creating decentralized platforms.
+              </p>
+              <p className="text-sm text-text-muted">
+                My technical expertise spans Python, JavaScript, Node.js, Solidity, Ethereum, Phoenix, and database management systems like MongoDB and MySQL. I have a strong focus on performance optimization, code maintainability, and delivering end-to-end solutions for seamless user experiences.
+              </p>
+            </CardContent>
+          </Card>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, x: 24 }}
