@@ -45,6 +45,13 @@ const projects: Project[] = [
     image: '/project-previews/valor-clothing.png',
     href: 'https://valor-clothing-store.vercel.app',
     category: 'Full Stack'
+  },
+  {
+    title: 'LumA E-Commerce',
+    detail: 'A full-featured e-commerce platform with product catalog, cart, checkout flow, and a clean, conversion-focused shopping experience.',
+    image: 'https://images.pexels.com/photos/6956903/pexels-photo-6956903.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    href: 'https://lum-a-ecommerce-webs-1kmv.bolt.host',
+    category: 'Full Stack'
   }
 ]
 
