@@ -1,4 +1,3 @@
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
 const services = [
@@ -46,23 +45,40 @@ export function ServicesSection() {
       <div className="container mx-auto">
         <div className="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
-            <Card key={service.title}>
-              <CardHeader>
-                <p className="text-sm uppercase tracking-[0.28em] text-accent">Service</p>
-                <CardTitle className="mt-4">{service.title}</CardTitle>
-                <CardDescription className="mt-3">{service.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <p className="text-sm font-semibold text-white">Technologies</p>
-                  <div className="flex flex-wrap gap-2">
-                    {service.items.map((item) => (
-                      <Badge key={item}>{item}</Badge>
-                    ))}
+            <div
+              key={service.title}
+              className="group h-72 [perspective:1400px]"
+            >
+              <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front face */}
+                <div className="absolute inset-0 flex flex-col rounded-[1.75rem] border border-border/20 bg-bg-elevated/90 p-6 shadow-soft [backface-visibility:hidden]">
+                  <p className="text-sm uppercase tracking-[0.28em] text-accent">Service</p>
+                  <h3 className="mt-4 text-xl font-semibold leading-tight text-white">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-text-muted">{service.description}</p>
+                  <div className="mt-auto pt-4">
+                    <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-text-muted transition group-hover:text-accent">
+                      Hover to flip
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+
+                {/* Back face */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 rounded-[1.75rem] border border-accent/30 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-6 shadow-soft [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                  <p className="text-sm uppercase tracking-[0.28em] text-accent">Technologies</p>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {service.items.map((item) => (
+                      <Badge key={item} variant="accent">{item}</Badge>
+                    ))}
+                  </div>
+                  <p className="mt-2 text-center text-xs uppercase tracking-[0.24em] text-text-muted">
+                    {service.title}
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
