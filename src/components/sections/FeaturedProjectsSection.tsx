@@ -52,6 +52,27 @@ const projects: Project[] = [
     image: 'https://images.pexels.com/photos/6956903/pexels-photo-6956903.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     href: 'https://lum-a-ecommerce-webs-1kmv.bolt.host',
     category: 'Full Stack'
+  },
+  {
+    title: 'My Wear Store',
+    detail: 'A modern fashion e-commerce storefront built for the African market — flash deals, curated collections, category browsing, and discount pricing with a premium shopping flow.',
+    image: '/project-previews/wear-store.png',
+    href: 'https://my-wear-store.netlify.app',
+    category: 'Frontend'
+  },
+  {
+    title: 'LeadRadar',
+    detail: 'A lead-intelligence SaaS platform that scans millions of public conversations, scores buying intent with AI, and alerts sales teams the moment someone needs their service.',
+    image: '/project-previews/leadradar.png',
+    href: 'https://leadradar-u5di.vercel.app',
+    category: 'Full Stack'
+  },
+  {
+    title: 'Mhentor Portfolio',
+    detail: 'A multi-page developer portfolio with case-study galleries, service categories, project filtering, and a fast, fully responsive experience.',
+    image: '/project-previews/mhentor.png',
+    href: 'https://mhentor.netlify.app/projects',
+    category: 'Frontend'
   }
 ]
 
