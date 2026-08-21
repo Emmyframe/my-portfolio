@@ -3,6 +3,9 @@ import { Layout } from './components/layout/Layout'
 import { ScrollToTop } from './components/ScrollToTop'
 import { HeroSection } from './components/sections/HeroSection'
 import { WhyChooseSection } from './components/sections/WhyChooseSection'
+import { ServicesSection } from './components/sections/ServicesSection'
+import { FeaturedProjectsSection } from './components/sections/FeaturedProjectsSection'
+import { ContactSection } from './components/sections/ContactSection'
 import { AboutPage } from './pages/AboutPage'
 import { ServicesPage } from './pages/ServicesPage'
 import { ProjectsPage } from './pages/ProjectsPage'
@@ -15,6 +18,9 @@ function HomePage() {
     <>
       <HeroSection />
       <WhyChooseSection />
+      <ServicesSection />
+      <FeaturedProjectsSection />
+      <ContactSection />
     </>
   )
 }

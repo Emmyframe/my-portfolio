@@ -7,6 +7,7 @@ type Project = {
   detail: string
   image: string
   href: string
+  repo?: string
   category: string
 }
 
@@ -44,6 +45,7 @@ const projects: Project[] = [
     detail: 'A fashion storefront with bold product presentation, curated collections, and modern e-commerce styling.',
     image: '/project-previews/valor-clothing.png',
     href: 'https://valor-clothing-store.vercel.app',
+    repo: 'https://github.com/Emmyframe/valor-clothing-store',
     category: 'Full Stack'
   },
   {
@@ -66,13 +68,6 @@ const projects: Project[] = [
     image: '/project-previews/leadradar.png',
     href: 'https://leadradar-u5di.vercel.app',
     category: 'Full Stack'
-  },
-  {
-    title: 'Mhentor Portfolio',
-    detail: 'A multi-page developer portfolio with case-study galleries, service categories, project filtering, and a fast, fully responsive experience.',
-    image: '/project-previews/mhentor.png',
-    href: 'https://mhentor.netlify.app/projects',
-    category: 'Frontend'
   }
 ]
 

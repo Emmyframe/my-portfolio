@@ -1,15 +1,5 @@
 import { Link } from 'react-router-dom'
 
-const footerLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
-  { label: 'Services', to: '/services' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'Experience', to: '/experience' },
-  { label: 'Resume', to: '/resume' },
-  { label: 'Contact', to: '/contact' }
-]
-
 export function Footer() {
   const year = new Date().getFullYear()
 
@@ -21,13 +11,6 @@ export function Footer() {
           <p className="mt-3 max-w-xl text-sm text-text-muted">
             Full-Stack Developer, AI Engineer & Digital Business Builder. Let's build your ideas, online presence quickly and efficiently.
           </p>
-          <div className="mt-4 flex flex-wrap gap-4">
-            {footerLinks.map((link) => (
-              <Link key={link.label} to={link.to} className="text-text-muted transition hover:text-accent">
-                {link.label}
-              </Link>
-            ))}
-          </div>
         </div>
 
         <div className="space-y-2 text-right">
